@@ -39,7 +39,7 @@ const DevlopiawebSection = () => {
     ];
 
     return (
-        <section ref={sectionRef as any} className="py-13 sm:py-19 lg:py-26 bg-background-primary text-text-primary">
+        <section ref={sectionRef as any} className="py-13 sm:py-19 lg:py-26 bg-background-secondary text-text-primary">
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6">

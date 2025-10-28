@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={sectionRef as any} className="bg-background-primary py-13 sm:py-19 lg:py-26">
+    <section ref={sectionRef as any} className="bg-background-secondary py-13 sm:py-19 lg:py-26">
       <div className="container mx-auto max-w-7xl px-4 lg:px-8">
         <div className={`mx-auto mb-12 md:mb-16 max-w-3xl text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary mb-4 md:mb-6">
