@@ -23,7 +23,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-background-primary overflow-hidden pt-12">
+    <section className="relative min-h-screen flex items-center justify-center bg-background-primary overflow-hidden pt-12 pb-20">
       {/* DotGrid Background */}
       <div className="absolute inset-0 w-full h-full">
         <DotGrid
