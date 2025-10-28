@@ -78,7 +78,8 @@ export default function FaqSection() {
         <div className="mt-8 md:mt-12 animate-in fade-in slide-in-from-bottom-2 duration-700" style={{ animationDelay: '700ms' }}>
           <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 md:py-7 text-sm md:text-base font-semibold uppercase tracking-wider rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30">
             <Link href="/faq">
-              DÉCOUVRIR TOUTES LES QUESTIONS FRÉQUENTES
+              <span className="md:hidden">TOUTES LES QUESTIONS FRÉQUENTES</span>
+              <span className="hidden md:inline">DÉCOUVRIR TOUTES LES QUESTIONS FRÉQUENTES</span>
             </Link>
           </Button>
         </div>
