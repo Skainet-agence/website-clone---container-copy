@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import Link from "next/link";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const faqData = [
   {
@@ -42,10 +43,12 @@ const faqData = [
 ];
 
 export default function FaqSection() {
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-13 sm:py-19 lg:py-26 bg-background-primary">
+    <section ref={sectionRef as any} className="py-13 sm:py-19 lg:py-26 bg-background-primary">
       <div className="container mx-auto px-4 max-w-[900px]">
-        <div className="text-center mb-12 md:mb-16 animate-in fade-in slide-in-from-bottom-2 duration-700">
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6">
             Questions Fréquentes
           </h2>
@@ -59,8 +62,8 @@ export default function FaqSection() {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-background-secondary border border-border rounded-lg hover:bg-muted hover:border-white/20 transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 duration-700"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`bg-background-secondary border border-border rounded-lg hover:bg-muted hover:border-white/20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 80}ms` }}
             >
               <AccordionTrigger className="group w-full text-left p-5 md:p-6 text-foreground text-sm sm:text-base md:text-lg font-medium flex items-center justify-between hover:no-underline [&>svg]:hidden">
                 <span className="flex-1 pr-4">{item.question}</span>
@@ -75,7 +78,7 @@ export default function FaqSection() {
           ))}
         </Accordion>
 
-        <div className="mt-8 md:mt-12 animate-in fade-in slide-in-from-bottom-2 duration-700" style={{ animationDelay: '700ms' }}>
+        <div className={`mt-8 md:mt-12 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Button asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 md:py-7 text-sm md:text-base font-semibold uppercase tracking-wider rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30">
             <Link href="/faq">
               <span className="md:hidden">TOUTES LES QUESTIONS FRÉQUENTES</span>

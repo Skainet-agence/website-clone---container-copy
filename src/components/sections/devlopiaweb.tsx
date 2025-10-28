@@ -1,6 +1,11 @@
+"use client";
+
 import { Check, Globe } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const DevlopiawebSection = () => {
+    const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
     const listWebPro = [
         "Design sur mesure",
         "Responsive 100%",
@@ -34,9 +39,9 @@ const DevlopiawebSection = () => {
     ];
 
     return (
-        <section className="py-13 sm:py-19 lg:py-26 bg-background-primary text-text-primary">
+        <section ref={sectionRef as any} className="py-13 sm:py-19 lg:py-26 bg-background-primary text-text-primary">
             <div className="container mx-auto px-4 max-w-7xl">
-                <div className="text-center mb-12 md:mb-16 animate-in fade-in slide-in-from-bottom-2 duration-700">
+                <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6">
                         On s'occupe de votre site web aussi
                     </h2>
@@ -47,7 +52,7 @@ const DevlopiawebSection = () => {
 
                 <div className="grid lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 items-start">
                     {/* Left Column (Main Card) */}
-                    <div className="lg:col-span-3 bg-background-secondary border border-border rounded-2xl p-6 md:p-8 flex flex-col h-full transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 animate-in fade-in slide-in-from-left duration-700">
+                    <div className={`lg:col-span-3 bg-background-secondary border border-border rounded-2xl p-6 md:p-8 flex flex-col h-full transition-all duration-700 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
                         <div className="flex items-center mb-6">
                             <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-3">
                                 <Globe className="w-7 h-7 md:w-8 md:h-8 text-primary" />
@@ -119,8 +124,8 @@ const DevlopiawebSection = () => {
                         {benefitCards.map((card, index) => (
                             <div 
                               key={card.num} 
-                              className="p-[1.5px] bg-gradient-to-br from-border-gradient-start to-border-gradient-end rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 animate-in fade-in slide-in-from-right duration-700"
-                              style={{ animationDelay: `${index * 150}ms` }}
+                              className={`p-[1.5px] bg-gradient-to-br from-border-gradient-start to-border-gradient-end rounded-2xl transition-all duration-700 hover:shadow-lg hover:shadow-primary/20 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+                              style={{ transitionDelay: `${index * 150}ms` }}
                             >
                                 <div className="bg-background-secondary rounded-[15px] p-5 md:p-6 lg:p-8 h-full hover:bg-background-secondary/90 transition-colors duration-300">
                                     <div className="flex items-start gap-4 md:gap-6">

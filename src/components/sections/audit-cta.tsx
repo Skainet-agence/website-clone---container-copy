@@ -2,8 +2,11 @@
 
 import { CalendarDays } from "lucide-react";
 import { useEffect } from "react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AuditCta = () => {
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
   useEffect(() => {
     // Load Calendly widget script
     const script = document.createElement('script');
@@ -25,10 +28,10 @@ const AuditCta = () => {
   };
 
   return (
-    <section id="calendly" className="bg-background-primary py-13 sm:py-19 lg:py-26">
+    <section ref={sectionRef as any} id="calendly" className="bg-background-primary py-13 sm:py-19 lg:py-26">
       <div className="container mx-auto px-4">
         <div 
-          className="mx-auto max-w-[800px] rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 lg:p-16 text-center backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:shadow-xl hover:shadow-primary/10 hover:shadow-[0_0_50px_rgba(0,132,255,0.7),0_0_100px_rgba(0,132,255,0.5),0_0_150px_rgba(0,132,255,0.3)] animate-in fade-in slide-in-from-bottom-4 duration-700"
+          className={`mx-auto max-w-[800px] rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10 lg:p-16 text-center backdrop-blur-sm transition-all duration-1000 hover:border-white/20 hover:shadow-xl hover:shadow-primary/10 hover:shadow-[0_0_50px_rgba(0,132,255,0.7),0_0_100px_rgba(0,132,255,0.5),0_0_150px_rgba(0,132,255,0.3)] ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}
         >
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <div className="flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-gradient-to-b from-[#4A5F9F] to-[#3B4B7C] transition-transform duration-300 hover:scale-110 hover:rotate-6">

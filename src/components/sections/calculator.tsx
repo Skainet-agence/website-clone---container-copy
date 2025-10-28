@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent } from "@/components/ui/card";
 import DotGrid from "@/components/ui/DotGrid";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import {
   LineChart,
   Line,
@@ -57,6 +58,8 @@ export default function Calculator() {
   const blobRef1 = useRef<HTMLDivElement>(null);
   const blobRef2 = useRef<HTMLDivElement>(null);
 
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   const WORKING_DAYS_PER_MONTH = 20;
 
   useEffect(() => {
@@ -100,7 +103,7 @@ export default function Calculator() {
   const handleCostChange = useCallback((value: number[]) => setHourlyCost(value[0]), []);
 
   return (
-    <section className="relative py-10 sm:py-13 lg:py-16 bg-background-primary overflow-hidden">
+    <section ref={sectionRef as any} className="relative py-10 sm:py-13 lg:py-16 bg-background-primary overflow-hidden">
       {/* DotGrid Background */}
       <div className="absolute inset-0 w-full h-full">
         <DotGrid
@@ -125,7 +128,7 @@ export default function Calculator() {
         className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-10 lg:mb-14">
+        <div className={`text-center mb-10 lg:mb-14 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
             Calculez vos{" "}
             <span className="text-[#0084FF]">économies potentielles</span>
@@ -137,7 +140,7 @@ export default function Calculator() {
 
         {/* Main calculator container */}
         <div className="max-w-[1400px] mx-auto">
-          <div className="bg-[#1e2247]/60 backdrop-blur-md rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 shadow-2xl">
+          <div className={`bg-[#1e2247]/60 backdrop-blur-md rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 shadow-2xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
             <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.9fr_1.3fr] gap-6 lg:gap-8 xl:gap-10">
               
               {/* Column 1: Inputs */}

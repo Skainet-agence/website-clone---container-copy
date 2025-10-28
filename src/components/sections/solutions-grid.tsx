@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import { Bot, Mail, Users, Share2, Calculator, ShoppingCart, Check, LucideProps } from 'lucide-react';
 import Link from 'next/link';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 interface SolutionCardProps {
   title: string;
@@ -86,12 +89,12 @@ const solutions: SolutionCardProps[] = [
   },
 ];
 
-const SolutionCard: React.FC<{ card: SolutionCardProps; index: number }> = ({ card, index }) => {
+const SolutionCard: React.FC<{ card: SolutionCardProps; index: number; isVisible: boolean }> = ({ card, index, isVisible }) => {
   const Icon = card.icon;
   return (
     <div 
-      className="bg-[#2a2f5a] p-6 md:p-8 rounded-2xl border border-white/10 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(0,0,0,0.5)] hover:border-white/20 group animate-in fade-in slide-in-from-bottom-4 duration-700"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className={`bg-[#2a2f5a] p-6 md:p-8 rounded-2xl border border-white/10 flex flex-col transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(0,0,0,0.5)] hover:border-white/20 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className="text-center mb-6">
         <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-gradient-to-br ${card.iconBgGradient} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3`}>
@@ -113,10 +116,12 @@ const SolutionCard: React.FC<{ card: SolutionCardProps; index: number }> = ({ ca
 };
 
 const SolutionsGrid = () => {
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="solutions" className="py-13 sm:py-19 lg:py-26 bg-background-secondary">
+    <section ref={sectionRef as any} id="solutions" className="py-13 sm:py-19 lg:py-26 bg-background-secondary">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-12 md:mb-16 animate-in fade-in slide-in-from-bottom-2 duration-700">
+        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6">
             Découvrez notre palette complète d'automatisations
           </h2>
@@ -127,11 +132,11 @@ const SolutionsGrid = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {solutions.map((card, index) => (
-            <SolutionCard key={index} card={card} index={index} />
+            <SolutionCard key={index} card={card} index={index} isVisible={isVisible} />
           ))}
         </div>
 
-        <div className="text-center mt-12 md:mt-16 animate-in fade-in slide-in-from-bottom-2 duration-700" style={{ animationDelay: '600ms' }}>
+        <div className={`text-center mt-12 md:mt-16 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Link
             href="/solutions"
             className="inline-block bg-primary text-primary-foreground font-semibold px-6 md:px-8 py-3 md:py-4 text-sm md:text-base rounded-xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"

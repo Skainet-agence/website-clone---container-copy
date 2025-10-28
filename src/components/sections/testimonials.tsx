@@ -1,4 +1,7 @@
+"use client";
+
 import { Star } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const testimonialsData = [
   {
@@ -23,17 +26,18 @@ type TestimonialCardProps = {
   name: string;
   title: string;
   index: number;
+  isVisible: boolean;
 };
 
-const TestimonialCard = ({ quote, name, title, index }: TestimonialCardProps) => {
+const TestimonialCard = ({ quote, name, title, index, isVisible }: TestimonialCardProps) => {
   return (
     <div 
-      className="flex h-full flex-col rounded-2xl bg-[#2a2f5a] p-6 md:p-8 border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(0,0,0,0.5)] hover:border-white/20 group animate-in fade-in slide-in-from-bottom-4 duration-700"
-      style={{ animationDelay: `${index * 150}ms` }}
+      className={`flex h-full flex-col rounded-2xl bg-[#2a2f5a] p-6 md:p-8 border border-white/10 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(0,0,0,0.5)] hover:border-white/20 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+      style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className="mb-6 flex">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className="h-5 w-5 fill-[#ffd700] text-[#ffd700] transition-transform duration-300 group-hover:scale-110" aria-hidden="true" style={{ animationDelay: `${i * 50}ms` }} />
+          <Star key={i} className="h-5 w-5 fill-[#ffd700] text-[#ffd700] transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
         ))}
       </div>
       <blockquote className="flex-grow italic text-text-secondary-light text-sm md:text-base">
@@ -48,10 +52,12 @@ const TestimonialCard = ({ quote, name, title, index }: TestimonialCardProps) =>
 };
 
 const TestimonialsSection = () => {
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="bg-background-primary py-13 sm:py-19 lg:py-26">
+    <section ref={sectionRef as any} className="bg-background-primary py-13 sm:py-19 lg:py-26">
       <div className="container mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="mx-auto mb-12 md:mb-16 max-w-3xl text-center animate-in fade-in slide-in-from-bottom-2 duration-700">
+        <div className={`mx-auto mb-12 md:mb-16 max-w-3xl text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary mb-4 md:mb-6">
             Nos résultats parlent pour nous
           </h2>
@@ -61,7 +67,7 @@ const TestimonialsSection = () => {
         </div>
         <div className="mx-auto grid max-w-none grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonialsData.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} index={index} />
+            <TestimonialCard key={index} {...testimonial} index={index} isVisible={isVisible} />
           ))}
         </div>
       </div>
