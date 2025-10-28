@@ -341,19 +341,16 @@ export default function SolutionsPage() {
         {/* Bottom CTA Section */}
         <section className="py-20 pb-24">
           <div className="container mx-auto px-6 max-w-[950px]">
-            <div className="bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-12 md:p-16 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+            <div className="bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-10 md:p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
                 Ces solutions ne sont qu'un <span className="text-[#0084FF]">aperçu</span> de nos possibilités
               </h2>
               
-              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-2">
-                Les automatisations présentées ci-dessus représentent seulement les plus demandées par
-              </p>
-              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-12">
-                nos clients. En réalité, <span className="font-semibold text-white">les possibilités sont infinies</span> et s'adaptent parfaitement à vos problématiques spécifiques.
+              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-10">
+                Les automatisations présentées ci-dessus représentent seulement les plus demandées par nos clients. En réalité, <span className="font-semibold text-white">les possibilités sont infinies</span> et s'adaptent parfaitement à vos problématiques spécifiques.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                 <div className="text-center">
                   <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-4">
                     <Lightbulb className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
