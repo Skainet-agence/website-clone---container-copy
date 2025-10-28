@@ -15,7 +15,13 @@ import {
   Infinity,
   Check,
   Calendar,
-  ShoppingBag
+  ShoppingBag,
+  Phone,
+  Landmark,
+  FileText,
+  Link2,
+  Wrench,
+  Rocket
 } from "lucide-react";
 import {
   FaMicrosoft,
@@ -100,7 +106,7 @@ const categoriesData: Category[] = [
       { name: "Pipedrive", icon: <TrendingUp className="w-6 h-6" /> },
       { name: "Zoho CRM", icon: <SiZoho className="w-6 h-6" /> },
       { name: "ActiveCampaign", icon: <Mail className="w-6 h-6" /> },
-      { name: "Aircall", icon: <div className="w-6 h-6 flex items-center justify-center text-xl">📞</div> },
+      { name: "Aircall", icon: <Phone className="w-6 h-6" /> },
       { name: "Intercom", icon: <SiIntercom className="w-6 h-6" /> },
       { name: "Zendesk", icon: <SiZendesk className="w-6 h-6" /> }
     ]
@@ -148,8 +154,8 @@ const categoriesData: Category[] = [
       { name: "Xero", icon: <SiXero className="w-6 h-6" /> },
       { name: "PayPal", icon: <FaPaypal className="w-6 h-6" /> },
       { name: "Stripe", icon: <FaStripe className="w-6 h-6" /> },
-      { name: "Banque", icon: <div className="w-6 h-6 flex items-center justify-center text-xl">🏦</div> },
-      { name: "Facture.net", icon: <div className="w-6 h-6 flex items-center justify-center text-xl">📄</div> },
+      { name: "Banque", icon: <Landmark className="w-6 h-6" /> },
+      { name: "Facture.net", icon: <FileText className="w-6 h-6" /> },
       { name: "Pennylane", icon: <Calculator className="w-6 h-6" /> }
     ]
   },
@@ -300,7 +306,7 @@ export default function IntegrationsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-14 h-14 rounded-xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-3">
-                    <div className="text-2xl">🔗</div>
+                    <Link2 className="w-7 h-7 text-[#0084FF]" strokeWidth={2} />
                   </div>
                   <h3 className="text-base font-bold text-white mb-1.5">Intégrations sur mesure</h3>
                   <p className="text-xs text-[#94A3B8] leading-relaxed">
@@ -310,7 +316,7 @@ export default function IntegrationsPage() {
 
                 <div className="text-center">
                   <div className="w-14 h-14 rounded-xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-3">
-                    <div className="text-2xl">🔧</div>
+                    <Wrench className="w-7 h-7 text-[#0084FF]" strokeWidth={2} />
                   </div>
                   <h3 className="text-base font-bold text-white mb-1.5">Solutions innovantes</h3>
                   <p className="text-xs text-[#94A3B8] leading-relaxed">
@@ -320,7 +326,7 @@ export default function IntegrationsPage() {
 
                 <div className="text-center">
                   <div className="w-14 h-14 rounded-xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-3">
-                    <div className="text-2xl">🚀</div>
+                    <Rocket className="w-7 h-7 text-[#0084FF]" strokeWidth={2} />
                   </div>
                   <h3 className="text-base font-bold text-white mb-1.5">Évolutives avec vous</h3>
                   <p className="text-xs text-[#94A3B8] leading-relaxed">
