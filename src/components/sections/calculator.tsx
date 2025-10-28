@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Card, CardContent } from "@/components/ui/card";
+import DotGrid from "@/components/ui/DotGrid";
 import {
   LineChart,
   Line,
@@ -53,7 +54,24 @@ export default function Calculator() {
   const [monthlyHoursSaved, setMonthlyHoursSaved] = useState(0);
   const [monthlySavings, setMonthlySavings] = useState(0);
 
+  const blobRef1 = useRef<HTMLDivElement>(null);
+  const blobRef2 = useRef<HTMLDivElement>(null);
+
   const WORKING_DAYS_PER_MONTH = 20;
+
+  useEffect(() => {
+    const animateBlobs = () => {
+      if (blobRef1.current) {
+        blobRef1.current.style.transform = `translate(${Math.sin(Date.now() / 3000) * 50}px, ${Math.cos(Date.now() / 2000) * 50}px)`;
+      }
+      if (blobRef2.current) {
+        blobRef2.current.style.transform = `translate(${Math.cos(Date.now() / 4000) * 50}px, ${Math.sin(Date.now() / 3500) * 50}px)`;
+      }
+      requestAnimationFrame(animateBlobs);
+    };
+    const animation = requestAnimationFrame(animateBlobs);
+    return () => cancelAnimationFrame(animation);
+  }, []);
 
   useEffect(() => {
     const dailyHours = hours * employees;
@@ -82,9 +100,29 @@ export default function Calculator() {
   const handleCostChange = useCallback((value: number[]) => setHourlyCost(value[0]), []);
 
   return (
-    <section className="bg-[#1a1f3a] py-10 sm:py-13 lg:py-16 relative overflow-hidden">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1f3a] via-[#151934] to-[#1a1f3a] pointer-events-none" />
+    <section className="relative py-10 sm:py-13 lg:py-16 bg-gradient-to-b from-background-primary to-[#1a1f3a] overflow-hidden">
+      {/* DotGrid Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <DotGrid
+          dotSize={7}
+          gap={20}
+          baseColor="rgba(37, 38, 84, 0.15)"
+          activeColor="#0084FF"
+          proximity={96}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+
+      <div
+        ref={blobRef1}
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div
+        ref={blobRef2}
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10 lg:mb-14">
