@@ -52,7 +52,7 @@ const DevlopiawebSection = () => {
 
                 <div className="grid lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 items-start">
                     {/* Left Column (Main Card) */}
-                    <div className={`lg:col-span-3 bg-background-secondary border border-border rounded-2xl p-6 md:p-8 flex flex-col h-full transition-all duration-700 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+                    <div className={`lg:col-span-3 bg-background-primary border border-border rounded-2xl p-6 md:p-8 flex flex-col h-full transition-all duration-700 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
                         <div className="flex items-center mb-6">
                             <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-3">
                                 <Globe className="w-7 h-7 md:w-8 md:h-8 text-primary" />
@@ -127,7 +127,7 @@ const DevlopiawebSection = () => {
                               className={`p-[1.5px] bg-gradient-to-br from-border-gradient-start to-border-gradient-end rounded-2xl transition-all duration-700 hover:shadow-lg hover:shadow-primary/20 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
                               style={{ transitionDelay: `${index * 150}ms` }}
                             >
-                                <div className="bg-background-secondary rounded-[15px] p-5 md:p-6 lg:p-8 h-full hover:bg-background-secondary/90 transition-colors duration-300">
+                                <div className="bg-background-primary rounded-[15px] p-5 md:p-6 lg:p-8 h-full hover:bg-background-primary/90 transition-colors duration-300">
                                     <div className="flex items-start gap-4 md:gap-6">
                                         <span className="text-4xl md:text-5xl font-extrabold bg-gradient-to-br from-border-gradient-start to-border-gradient-end bg-clip-text text-transparent leading-none pt-1">
                                             {card.num}
