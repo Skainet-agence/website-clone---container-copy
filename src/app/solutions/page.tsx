@@ -258,20 +258,20 @@ export default function SolutionsPage() {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-[1.1] break-words">
                 Solutions d'<span className="text-[#0084FF]">Automatisation IA</span>
               </h1>
               
-              <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto leading-relaxed mb-2">
+              <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl mx-auto leading-relaxed mb-2 px-2">
                 Découvrez notre gamme complète de solutions d'automatisation intelligente
               </p>
-              <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto leading-relaxed mb-10">
+              <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl mx-auto leading-relaxed mb-10 px-2">
                 pour transformer votre entreprise
               </p>
               
               <Button
                 asChild
-                className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-8 py-6 h-auto rounded-lg font-semibold text-base shadow-lg shadow-[#0084FF]/25 transition-all duration-300 hover:scale-[1.02]"
+                className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-6 sm:px-8 py-5 sm:py-6 h-auto rounded-lg font-semibold text-sm sm:text-base shadow-lg shadow-[#0084FF]/25 transition-all duration-300 hover:scale-[1.02]"
               >
                 <Link href="#solutions" onClick={handleScrollToSolutions}>
                   Découvrir nos solutions
