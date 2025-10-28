@@ -224,28 +224,28 @@ const solutionsData = [
 
 export default function SolutionsPage() {
   return (
-    <div className="min-h-screen relative bg-[#0D0E21]">
+    <div className="min-h-screen relative bg-[#0A0B1E]">
       <Navigation />
       
       <main className="min-h-screen relative z-0">
         {/* Hero Section */}
-        <section className="pt-40 pb-16">
+        <section className="pt-32 pb-20">
           <div className="container mx-auto px-6 max-w-[1100px]">
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-5 tracking-tight leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
                 Solutions d'<span className="text-[#0084FF]">Automatisation IA</span>
               </h1>
               
-              <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto mb-4 leading-relaxed">
+              <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto leading-relaxed mb-2">
                 Découvrez notre gamme complète de solutions d'automatisation intelligente
               </p>
-              <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto mb-8 leading-relaxed">
+              <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto leading-relaxed mb-10">
                 pour transformer votre entreprise
               </p>
               
               <Button
                 asChild
-                className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-8 py-6 h-auto rounded-lg font-semibold text-base"
+                className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-8 py-6 h-auto rounded-lg font-semibold text-base shadow-lg shadow-[#0084FF]/25 transition-all duration-300 hover:scale-[1.02]"
               >
                 <Link href="/#calendly">
                   Découvrir nos solutions
@@ -263,13 +263,13 @@ export default function SolutionsPage() {
             <section
               key={category.id}
               id={categoryIndex === 0 ? "solutions" : category.id}
-              className="py-16"
+              className="py-12"
             >
               <div className="container mx-auto px-6 max-w-[1280px]">
                 {/* Category Header Badge */}
-                <div className="mb-10 flex justify-center">
+                <div className="mb-8 flex justify-center">
                   <div
-                    className="inline-flex items-center gap-2 rounded-full px-6 py-3 shadow-lg"
+                    className="inline-flex items-center gap-2.5 rounded-full px-6 py-2.5 shadow-lg"
                     style={{
                       backgroundColor: category.bgColor
                     }}
@@ -282,17 +282,17 @@ export default function SolutionsPage() {
                 </div>
 
                 {/* Solutions Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {category.solutions.map((solution, solutionIndex) => {
                     const SolutionIcon = solution.icon;
 
                     return (
                       <div
                         key={solutionIndex}
-                        className="group bg-[#1A1B3F]/90 backdrop-blur-sm rounded-xl p-6 border border-white/[0.08] hover:border-white/[0.15] transition-all duration-300 hover:shadow-xl"
+                        className="group bg-[#1A1B3F] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                       >
                         {/* Icon */}
-                        <div className="flex justify-center mb-4">
+                        <div className="flex justify-center mb-5">
                           <div
                             className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg"
                             style={{
@@ -304,24 +304,24 @@ export default function SolutionsPage() {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-base font-bold text-white mb-3 leading-tight text-center">
+                        <h3 className="text-lg font-bold text-white mb-3 leading-tight text-center">
                           {solution.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-xs text-[#94A3B8] mb-5 leading-relaxed text-center">
+                        <p className="text-[13px] text-[#94A3B8] mb-5 leading-relaxed text-center">
                           {solution.description}
                         </p>
 
                         {/* Features List */}
-                        <ul className="space-y-2">
+                        <ul className="space-y-2.5">
                           {solution.features.map((feature, featureIndex) => (
                             <li
                               key={featureIndex}
-                              className="flex items-start gap-2 text-[11px] text-[#94A3B8] leading-relaxed"
+                              className="flex items-start gap-2.5 text-[12px] text-[#94A3B8] leading-relaxed"
                             >
                               <Check
-                                className="w-3.5 h-3.5 mt-0.5 shrink-0"
+                                className="w-4 h-4 mt-0.5 shrink-0"
                                 style={{ color: category.bgColor }}
                                 strokeWidth={3}
                               />
@@ -339,17 +339,17 @@ export default function SolutionsPage() {
         })}
 
         {/* Bottom CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6 max-w-[900px]">
-            <div className="bg-[#1A1B3F]/60 backdrop-blur-sm border border-white/[0.08] rounded-2xl p-16 text-center">
-              <h2 className="text-4xl font-bold text-white leading-tight mb-6">
+        <section className="py-20 pb-24">
+          <div className="container mx-auto px-6 max-w-[950px]">
+            <div className="bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-12 md:p-16 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
                 Ces solutions ne sont qu'un <span className="text-[#0084FF]">aperçu</span> de nos possibilités
               </h2>
               
-              <p className="text-base text-[#94A3B8]/90 leading-relaxed max-w-2xl mx-auto mb-4">
+              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-2">
                 Les automatisations présentées ci-dessus représentent seulement les plus demandées par
               </p>
-              <p className="text-base text-[#94A3B8]/90 leading-relaxed max-w-2xl mx-auto mb-12">
+              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-12">
                 nos clients. En réalité, <span className="font-semibold text-white">les possibilités sont infinies</span> et s'adaptent parfaitement à vos problématiques spécifiques.
               </p>
 
@@ -359,7 +359,7 @@ export default function SolutionsPage() {
                     <Lightbulb className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">Solutions Sur Mesure</h3>
-                  <p className="text-sm text-[#94A3B8]/80 leading-relaxed">
+                  <p className="text-sm text-[#94A3B8] leading-relaxed">
                     Chaque automatisation est conçue spécifiquement pour vos besoins uniques
                   </p>
                 </div>
@@ -369,7 +369,7 @@ export default function SolutionsPage() {
                     <Target className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">Adaptabilité Totale</h3>
-                  <p className="text-sm text-[#94A3B8]/80 leading-relaxed">
+                  <p className="text-sm text-[#94A3B8] leading-relaxed">
                     Nous nous adaptons à votre secteur, vos outils et vos contraintes
                   </p>
                 </div>
@@ -379,22 +379,22 @@ export default function SolutionsPage() {
                     <Infinity className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">Possibilités Infinies</h3>
-                  <p className="text-sm text-[#94A3B8]/80 leading-relaxed">
+                  <p className="text-sm text-[#94A3B8] leading-relaxed">
                     Si cela peut être automatisé, nous pouvons le faire pour vous
                   </p>
                 </div>
               </div>
 
               {/* Comment ça marche section */}
-              <div className="bg-[#252654]/40 border border-white/[0.05] rounded-xl p-8 mb-10 text-left max-w-2xl mx-auto">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#FF6B9D] to-[#C85588] flex items-center justify-center">
-                    <span className="text-white text-lg">🚀</span>
+              <div className="bg-[#252654]/50 border border-white/[0.08] rounded-2xl p-8 mb-10 text-left max-w-2xl mx-auto">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF6B9D] to-[#C85588] flex items-center justify-center">
+                    <span className="text-white text-xl">🚀</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white">Comment ça marche ?</h3>
+                  <h3 className="text-xl font-bold text-white">Comment ça marche ?</h3>
                 </div>
                 
-                <p className="text-sm text-[#94A3B8] mb-4">
+                <p className="text-sm text-[#94A3B8] mb-5">
                   Lors de notre <span className="font-semibold text-white">rendez-vous gratuit</span>, nous analysons ensemble :
                 </p>
                 
@@ -420,19 +420,19 @@ export default function SolutionsPage() {
 
               <Button
                 asChild
-                className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-10 py-7 h-auto rounded-xl font-semibold text-base group shadow-lg shadow-[#0084FF]/20"
+                className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-10 py-7 h-auto rounded-xl font-semibold text-base group shadow-lg shadow-[#0084FF]/25 transition-all duration-300 hover:scale-[1.02]"
               >
                 <Link href="/#calendly" className="inline-flex items-center gap-3">
                   <span className="flex items-center gap-2">
-                    <span className="text-lg">🚀</span>
+                    <span className="text-xl">🚀</span>
                     Réserver Mon Audit Gratuit - Découvrons Vos Opportunités
                   </span>
                 </Link>
               </Button>
               
-              <p className="text-sm text-[#94A3B8]/70 mt-5 flex items-center justify-center gap-2">
-                <span className="inline-flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+              <p className="text-sm text-[#94A3B8]/70 mt-6 flex flex-wrap items-center justify-center gap-2">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-[#10B981]"></span>
                   Consultation 100% gratuite et sans engagement
                 </span>
                 <span className="text-[#94A3B8]/40">•</span>
