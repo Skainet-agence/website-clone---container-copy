@@ -419,11 +419,8 @@ export default function SolutionsPage() {
                 asChild
                 className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-10 py-7 h-auto rounded-xl font-semibold text-base group shadow-lg shadow-[#0084FF]/25 transition-all duration-300 hover:scale-[1.02]"
               >
-                <Link href="/#calendly" className="inline-flex items-center gap-3">
-                  <span className="flex items-center gap-2">
-                    <span className="text-xl">🎯</span>
-                    Réserver Mon Audit Gratuit - Découvrons Vos Opportunités
-                  </span>
+                <Link href="/#calendly">
+                  Réserver mon audit gratuit
                 </Link>
               </Button>
               
