@@ -383,10 +383,10 @@ export default function SolutionsPage() {
               </div>
 
               {/* Comment ça marche section */}
-              <div className="bg-[#252654]/50 border border-white/[0.08] rounded-2xl p-8 mb-10 text-left max-w-2xl mx-auto">
-                <div className="flex items-center gap-3 mb-5">
+              <div className="bg-[#252654]/50 border border-white/[0.08] rounded-2xl p-8 mb-10 text-center max-w-2xl mx-auto">
+                <div className="flex items-center justify-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF6B9D] to-[#C85588] flex items-center justify-center">
-                    <span className="text-white text-xl">🚀</span>
+                    <span className="text-white text-xl">🎯</span>
                   </div>
                   <h3 className="text-xl font-bold text-white">Comment ça marche ?</h3>
                 </div>
@@ -421,7 +421,7 @@ export default function SolutionsPage() {
               >
                 <Link href="/#calendly" className="inline-flex items-center gap-3">
                   <span className="flex items-center gap-2">
-                    <span className="text-xl">🚀</span>
+                    <span className="text-xl">🎯</span>
                     Réserver Mon Audit Gratuit - Découvrons Vos Opportunités
                   </span>
                 </Link>
