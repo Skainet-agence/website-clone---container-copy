@@ -100,7 +100,7 @@ export default function Calculator() {
   const handleCostChange = useCallback((value: number[]) => setHourlyCost(value[0]), []);
 
   return (
-    <section className="relative py-10 sm:py-13 lg:py-16 bg-gradient-to-b from-background-primary to-[#1a1f3a] overflow-hidden">
+    <section className="relative py-10 sm:py-13 lg:py-16 bg-background-primary overflow-hidden">
       {/* DotGrid Background */}
       <div className="absolute inset-0 w-full h-full">
         <DotGrid
