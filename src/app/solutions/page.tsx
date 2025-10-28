@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Bot,
   Headphones,
@@ -223,6 +224,24 @@ const solutionsData = [
 
 
 export default function SolutionsPage() {
+  const heroAnimation = useScrollAnimation({ threshold: 0.2 });
+  const ctaAnimation = useScrollAnimation({ threshold: 0.2 });
+
+  const handleScrollToSolutions = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const solutionsSection = document.getElementById("solutions");
+    if (solutionsSection) {
+      const offset = 100; // Offset pour tenir compte de la navigation
+      const elementPosition = solutionsSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen relative bg-[#0A0B1E]">
       <Navigation />
@@ -231,7 +250,14 @@ export default function SolutionsPage() {
         {/* Hero Section */}
         <section className="pt-32 pb-20">
           <div className="container mx-auto px-6 max-w-[1100px]">
-            <div className="text-center">
+            <div 
+              ref={heroAnimation.ref}
+              className={`text-center transition-all duration-1000 ${
+                heroAnimation.isVisible 
+                  ? "opacity-100 translate-y-0" 
+                  : "opacity-0 translate-y-8"
+              }`}
+            >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
                 Solutions d'<span className="text-[#0084FF]">Automatisation IA</span>
               </h1>
@@ -247,7 +273,7 @@ export default function SolutionsPage() {
                 asChild
                 className="bg-[#0084FF] hover:bg-[#0084FF]/90 text-white px-8 py-6 h-auto rounded-lg font-semibold text-base shadow-lg shadow-[#0084FF]/25 transition-all duration-300 hover:scale-[1.02]"
               >
-                <Link href="/#calendly">
+                <Link href="#solutions" onClick={handleScrollToSolutions}>
                   Découvrir nos solutions
                 </Link>
               </Button>
@@ -258,6 +284,7 @@ export default function SolutionsPage() {
         {/* Solutions Sections */}
         {solutionsData.map((category, categoryIndex) => {
           const CategoryIcon = category.icon;
+          const badgeAnimation = useScrollAnimation({ threshold: 0.15 });
 
           return (
             <section
@@ -269,7 +296,12 @@ export default function SolutionsPage() {
                 {/* Category Header Badge */}
                 <div className="mb-8 flex justify-center">
                   <div
-                    className="inline-flex items-center gap-2.5 rounded-full px-6 py-2.5 shadow-lg"
+                    ref={badgeAnimation.ref}
+                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-2.5 shadow-lg transition-all duration-700 ${
+                      badgeAnimation.isVisible
+                        ? "opacity-100 scale-100"
+                        : "opacity-0 scale-90"
+                    }`}
                     style={{
                       backgroundColor: category.bgColor
                     }}
@@ -285,11 +317,21 @@ export default function SolutionsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {category.solutions.map((solution, solutionIndex) => {
                     const SolutionIcon = solution.icon;
+                    const cardAnimation = useScrollAnimation({ threshold: 0.1 });
 
                     return (
                       <div
                         key={solutionIndex}
-                        className="group bg-[#1A1B3F] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                        ref={cardAnimation.ref}
+                        className={`group bg-[#1A1B3F] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.1] hover:border-white/[0.2] transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
+                          cardAnimation.isVisible
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-12"
+                        }`}
+                        style={{
+                          transitionDelay: cardAnimation.isVisible ? `${solutionIndex * 100}ms` : "0ms",
+                          transitionDuration: "800ms"
+                        }}
                       >
                         {/* Icon */}
                         <div className="flex justify-center mb-5">
@@ -341,7 +383,14 @@ export default function SolutionsPage() {
         {/* Bottom CTA Section */}
         <section className="py-20 pb-24">
           <div className="container mx-auto px-6 max-w-[950px]">
-            <div className="bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-8 md:p-10 text-center">
+            <div 
+              ref={ctaAnimation.ref}
+              className={`bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-8 md:p-10 text-center transition-all duration-1000 ${
+                ctaAnimation.isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-12"
+              }`}
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-3">
                 Ces solutions ne sont qu'un <span className="text-[#0084FF]">aperçu</span> de nos possibilités
               </h2>
