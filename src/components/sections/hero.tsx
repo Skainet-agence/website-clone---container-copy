@@ -55,7 +55,7 @@ export default function HeroSection() {
           vers de nouveaux sommets
         </h1>
         
-        <div className="space-y-2 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: '200ms' }}>
+        <div className="space-y-2 my-16 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{ animationDelay: '200ms' }}>
           <p className="text-lg sm:text-xl font-normal text-text-secondary">
             Libérez votre génie créatif
           </p>
@@ -66,7 +66,7 @@ export default function HeroSection() {
         
         <Link
           href="#calendly"
-          className="inline-block rounded-lg bg-[#0066ff] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold uppercase text-white shadow-[0_4px_14px_rgba(0,102,255,0.5)] transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,102,255,0.6)] hover:bg-[#0052cc] animate-in fade-in slide-in-from-bottom-4 duration-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent text-center mt-32"
+          className="inline-block rounded-lg bg-[#0066ff] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold uppercase text-white shadow-[0_4px_14px_rgba(0,102,255,0.5)] transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,102,255,0.6)] hover:bg-[#0052cc] animate-in fade-in slide-in-from-bottom-4 duration-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent text-center mt-16"
           style={{ animationDelay: '400ms' }}>
 
           RÉSERVEZ VOTRE AUDIT GRATUIT MAINTENANT – PLACES LIMITÉES !
