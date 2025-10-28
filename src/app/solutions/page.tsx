@@ -341,41 +341,41 @@ export default function SolutionsPage() {
         {/* Bottom CTA Section */}
         <section className="py-20 pb-24">
           <div className="container mx-auto px-6 max-w-[950px]">
-            <div className="bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-10 md:p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+            <div className="bg-[#1A1B3F]/80 backdrop-blur-sm border border-white/[0.1] rounded-3xl p-8 md:p-10 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-3">
                 Ces solutions ne sont qu'un <span className="text-[#0084FF]">aperçu</span> de nos possibilités
               </h2>
               
-              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-10">
+              <p className="text-base text-[#94A3B8] leading-relaxed max-w-2xl mx-auto mb-6">
                 Les automatisations présentées ci-dessus représentent seulement les plus demandées par nos clients. En réalité, <span className="font-semibold text-white">les possibilités sont infinies</span> et s'adaptent parfaitement à vos problématiques spécifiques.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-3">
                     <Lightbulb className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Solutions Sur Mesure</h3>
+                  <h3 className="text-lg font-bold text-white mb-1.5">Solutions Sur Mesure</h3>
                   <p className="text-sm text-[#94A3B8] leading-relaxed">
                     Chaque automatisation est conçue spécifiquement pour vos besoins uniques
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-3">
                     <Target className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Adaptabilité Totale</h3>
+                  <h3 className="text-lg font-bold text-white mb-1.5">Adaptabilité Totale</h3>
                   <p className="text-sm text-[#94A3B8] leading-relaxed">
                     Nous nous adaptons à votre secteur, vos outils et vos contraintes
                   </p>
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-3">
                     <Infinity className="w-8 h-8 text-[#0084FF]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Possibilités Infinies</h3>
+                  <h3 className="text-lg font-bold text-white mb-1.5">Possibilités Infinies</h3>
                   <p className="text-sm text-[#94A3B8] leading-relaxed">
                     Si cela peut être automatisé, nous pouvons le faire pour vous
                   </p>
@@ -383,19 +383,19 @@ export default function SolutionsPage() {
               </div>
 
               {/* Comment ça marche section */}
-              <div className="bg-[#252654]/50 border border-white/[0.08] rounded-2xl p-8 mb-10 text-center max-w-2xl mx-auto">
-                <div className="flex items-center justify-center gap-3 mb-5">
+              <div className="bg-[#252654]/50 border border-white/[0.08] rounded-2xl p-6 mb-8 text-center max-w-2xl mx-auto">
+                <div className="flex items-center justify-center gap-3 mb-3">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF6B9D] to-[#C85588] flex items-center justify-center">
                     <span className="text-white text-xl">🎯</span>
                   </div>
                   <h3 className="text-xl font-bold text-white">Comment ça marche ?</h3>
                 </div>
                 
-                <p className="text-sm text-[#94A3B8] mb-5">
+                <p className="text-sm text-[#94A3B8] mb-3">
                   Lors de notre <span className="font-semibold text-white">rendez-vous gratuit</span>, nous analysons ensemble :
                 </p>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   <li className="flex items-start gap-3 text-sm text-[#94A3B8]">
                     <Check className="w-5 h-5 mt-0.5 shrink-0 text-[#0084FF]" strokeWidth={2.5} />
                     <span>Vos processus actuels et leurs difficultés</span>
@@ -427,7 +427,7 @@ export default function SolutionsPage() {
                 </Link>
               </Button>
               
-              <p className="text-sm text-[#94A3B8]/70 mt-6 flex flex-wrap items-center justify-center gap-2">
+              <p className="text-sm text-[#94A3B8]/70 mt-4 flex flex-wrap items-center justify-center gap-2">
                 <span className="inline-flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#10B981]"></span>
                   Consultation 100% gratuite et sans engagement
