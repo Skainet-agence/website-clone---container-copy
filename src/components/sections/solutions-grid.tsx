@@ -114,7 +114,7 @@ const SolutionCard: React.FC<{ card: SolutionCardProps; index: number }> = ({ ca
 
 const SolutionsGrid = () => {
   return (
-    <section id="solutions" className="py-13 sm:py-19 lg:py-26 bg-background-primary">
+    <section id="solutions" className="py-13 sm:py-19 lg:py-26 bg-background-secondary">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12 md:mb-16 animate-in fade-in slide-in-from-bottom-2 duration-700">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6">
