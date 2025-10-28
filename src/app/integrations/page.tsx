@@ -249,7 +249,7 @@ export default function IntegrationsPage() {
                       <div
                         key={integrationIndex}
                         ref={cardAnimation.ref}
-                        className={`group bg-[#13143B]/60 backdrop-blur-sm rounded-xl p-4 border border-white/[0.08] hover:border-white/[0.15] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 flex flex-col items-center justify-center min-h-[110px] ${
+                        className={`group bg-[#1E1F4A]/80 backdrop-blur-sm rounded-xl p-5 border border-[#2E3A8C]/40 hover:border-[#2E3A8C]/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 flex flex-col items-center justify-center min-h-[120px] ${
                           cardAnimation.isVisible
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-12"
@@ -261,14 +261,14 @@ export default function IntegrationsPage() {
                       >
                         {/* Icon */}
                         <div 
-                          className="mb-2.5 transition-transform duration-300 group-hover:scale-110"
+                          className="mb-3 transition-transform duration-300 group-hover:scale-110"
                           style={{ color: category.color }}
                         >
                           {integration.icon}
                         </div>
 
                         {/* Name */}
-                        <h3 className="text-xs font-semibold text-white/90 text-center leading-tight">
+                        <h3 className="text-sm font-semibold text-white text-center leading-tight">
                           {integration.name}
                         </h3>
                       </div>
