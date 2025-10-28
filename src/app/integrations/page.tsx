@@ -13,7 +13,9 @@ import {
   Calculator,
   Code,
   Infinity,
-  Check
+  Check,
+  Calendar,
+  ShoppingBag
 } from "lucide-react";
 import {
   FaMicrosoft,
@@ -39,14 +41,12 @@ import {
 } from "react-icons/fa";
 import {
   SiNotion,
-  SiMondaydotcom,
   SiHubspot,
   SiZoho,
   SiIntercom,
   SiZendesk,
   SiWoocommerce,
   SiMagento,
-  SiPrestaShop,
   SiBigcommerce,
   SiMailchimp,
   SiWhatsapp,
@@ -84,7 +84,7 @@ const categoriesData: Category[] = [
       { name: "Slack", icon: <FaSlack className="w-8 h-8" /> },
       { name: "Trello", icon: <FaTrello className="w-8 h-8" /> },
       { name: "Asana", icon: <FaList className="w-8 h-8" /> },
-      { name: "Monday.com", icon: <SiMondaydotcom className="w-8 h-8" /> },
+      { name: "Monday.com", icon: <Calendar className="w-8 h-8" /> },
       { name: "Calendly", icon: <FaCalendarAlt className="w-8 h-8" /> },
       { name: "Notion", icon: <SiNotion className="w-8 h-8" /> }
     ]
@@ -114,7 +114,7 @@ const categoriesData: Category[] = [
       { name: "Shopify", icon: <FaShopify className="w-8 h-8" /> },
       { name: "WooCommerce", icon: <SiWoocommerce className="w-8 h-8" /> },
       { name: "Magento", icon: <SiMagento className="w-8 h-8" /> },
-      { name: "PrestaShop", icon: <SiPrestaShop className="w-8 h-8" /> },
+      { name: "PrestaShop", icon: <ShoppingBag className="w-8 h-8" /> },
       { name: "Amazon", icon: <FaAmazon className="w-8 h-8" /> },
       { name: "eBay", icon: <FaEbay className="w-8 h-8" /> },
       { name: "BigCommerce", icon: <SiBigcommerce className="w-8 h-8" /> },
