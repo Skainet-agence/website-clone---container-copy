@@ -12,14 +12,8 @@ export default function ProcessusPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
             Notre <span className="text-primary">Processus</span> Éprouvé
           </h1>
-          <p className="text-lg text-text-secondary mb-4 max-w-2xl mx-auto">
-            Découvrez notre méthode en 3 étapes pour transformer votre entreprise avec
-          </p>
-          <p className="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-            l'intelligence artificielle. Un processus rodé qui garantit des résultats
-          </p>
-          <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
-            mesurables et durables.
+          <p className="text-lg text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed">
+            Découvrez notre méthode en 3 étapes pour transformer votre entreprise avec l'intelligence artificielle. Un processus rodé qui garantit des résultats mesurables et durables.
           </p>
           <Link
             href="#steps"
@@ -37,10 +31,9 @@ export default function ProcessusPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               3 Étapes Pour Votre Succès
             </h2>
-            <p className="text-text-secondary text-lg">
-              Une approche méthodique et personnalisée pour maximiser votre retour sur
+            <p className="text-text-secondary text-lg max-w-3xl mx-auto">
+              Une approche méthodique et personnalisée pour maximiser votre retour sur investissement
             </p>
-            <p className="text-text-secondary text-lg">investissement</p>
           </div>
 
           <div className="relative">
@@ -51,7 +44,7 @@ export default function ProcessusPage() {
               {/* Card 01 - Blue */}
               <div className="relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full z-10" />
-                <div className="bg-[#1E1F4A] border border-primary/30 rounded-2xl p-8 mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <div className="bg-[#20214A] border border-primary/30 rounded-2xl p-8 mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
                   <div className="text-6xl font-black text-primary mb-4">01</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Audit Gratuit</h3>
                   <p className="text-text-secondary mb-6 leading-relaxed">
@@ -85,7 +78,7 @@ export default function ProcessusPage() {
               {/* Card 02 - Green */}
               <div className="relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#22C55E] rounded-full z-10" />
-                <div className="bg-[#1E1F4A] border border-[#22C55E]/30 rounded-2xl p-8 mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20">
+                <div className="bg-[#20214A] border border-[#22C55E]/30 rounded-2xl p-8 mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20">
                   <div className="text-6xl font-black text-[#22C55E] mb-4">02</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Implémentation</h3>
                   <p className="text-text-secondary mb-6 leading-relaxed">
@@ -119,7 +112,7 @@ export default function ProcessusPage() {
               {/* Card 03 - Orange */}
               <div className="relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#F97316] rounded-full z-10" />
-                <div className="bg-[#1E1F4A] border border-[#F97316]/30 rounded-2xl p-8 mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-[#F97316]/20">
+                <div className="bg-[#20214A] border border-[#F97316]/30 rounded-2xl p-8 mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-[#F97316]/20">
                   <div className="text-6xl font-black text-[#F97316] mb-4">03</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Optimisation</h3>
                   <p className="text-text-secondary mb-6 leading-relaxed">
@@ -161,13 +154,13 @@ export default function ProcessusPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Pourquoi Cette Méthode Fonctionne
             </h2>
-            <p className="text-text-secondary text-lg">
+            <p className="text-text-secondary text-lg max-w-3xl mx-auto">
               Des résultats garantis grâce à une approche éprouvée et personnalisée
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-[#1E1F4A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/60 rounded-2xl flex items-center justify-center mb-4">
                 <Target className="h-8 w-8 text-white" />
               </div>
@@ -177,7 +170,7 @@ export default function ProcessusPage() {
               </p>
             </div>
 
-            <div className="bg-[#1E1F4A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-[#22C55E] to-[#22C55E]/60 rounded-2xl flex items-center justify-center mb-4">
                 <Users className="h-8 w-8 text-white" />
               </div>
@@ -187,7 +180,7 @@ export default function ProcessusPage() {
               </p>
             </div>
 
-            <div className="bg-[#1E1F4A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-[#F97316] to-[#F97316]/60 rounded-2xl flex items-center justify-center mb-4">
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
@@ -197,7 +190,7 @@ export default function ProcessusPage() {
               </p>
             </div>
 
-            <div className="bg-[#1E1F4A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-[#7C3AED] to-[#7C3AED]/60 rounded-2xl flex items-center justify-center mb-4">
                 <Zap className="h-8 w-8 text-white" />
               </div>
@@ -217,15 +210,14 @@ export default function ProcessusPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Chronologie de Votre Succès
             </h2>
-            <p className="text-text-secondary text-lg">
-              De la première consultation aux résultats rapides, découvrez le calendrier de
+            <p className="text-text-secondary text-lg max-w-3xl mx-auto">
+              De la première consultation aux résultats rapides, découvrez le calendrier de votre transformation
             </p>
-            <p className="text-text-secondary text-lg">votre transformation</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* J+0 */}
-            <div className="bg-[#1E1F4A] border border-primary/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A] border border-primary/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
               <div className="text-4xl font-black text-primary mb-3">J+0</div>
               <h3 className="text-xl font-bold text-white mb-3">Premier Contact</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
@@ -238,13 +230,17 @@ export default function ProcessusPage() {
                 </li>
                 <li className="flex items-start text-text-secondary text-sm">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0" />
-                  <span>Informations sur la continuité ou ligne facultés à la confidentialité.</span>
+                  <span>Informations sur la continuité</span>
+                </li>
+                <li className="flex items-start text-text-secondary text-sm">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0" />
+                  <span>Sans engagement ni frais</span>
                 </li>
               </ul>
             </div>
 
             {/* J+7 */}
-            <div className="bg-[#1E1F4A] border border-[#22C55E]/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A] border border-[#22C55E]/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
               <div className="text-4xl font-black text-[#22C55E] mb-3">J+7</div>
               <h3 className="text-xl font-bold text-white mb-3">Audit Complet</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
@@ -263,7 +259,7 @@ export default function ProcessusPage() {
             </div>
 
             {/* J+30 */}
-            <div className="bg-[#1E1F4A] border border-[#F97316]/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A] border border-[#F97316]/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
               <div className="text-4xl font-black text-[#F97316] mb-3">J+30</div>
               <h3 className="text-xl font-bold text-white mb-3">Première Automatisation</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
@@ -282,7 +278,7 @@ export default function ProcessusPage() {
             </div>
 
             {/* J+90 */}
-            <div className="bg-[#1E1F4A] border border-[#7C3AED]/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#20214A] border border-[#7C3AED]/30 rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
               <div className="text-4xl font-black text-[#7C3AED] mb-3">J+90</div>
               <h3 className="text-xl font-bold text-white mb-3">Résultats Mesurables</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
