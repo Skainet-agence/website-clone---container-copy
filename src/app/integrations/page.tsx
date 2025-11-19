@@ -2,8 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Navigation from "@/components/sections/navigation";
-import Footer from "@/components/sections/footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Laptop,
@@ -183,8 +181,6 @@ export default function IntegrationsPage() {
 
   return (
     <div className="min-h-screen relative bg-[#0A0B1E]">
-      <Navigation />
-      
       <main className="min-h-screen relative z-0">
         {/* Hero Section */}
         <section className="pt-32 pb-16">
@@ -379,8 +375,6 @@ export default function IntegrationsPage() {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </div>
   );
 }

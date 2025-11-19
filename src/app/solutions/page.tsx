@@ -2,8 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Navigation from "@/components/sections/navigation";
-import Footer from "@/components/sections/footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Bot,
@@ -231,7 +229,7 @@ export default function SolutionsPage() {
     e.preventDefault();
     const solutionsSection = document.getElementById("solutions");
     if (solutionsSection) {
-      const offset = 100; // Offset pour tenir compte de la navigation
+      const offset = 100;
       const elementPosition = solutionsSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -244,8 +242,6 @@ export default function SolutionsPage() {
 
   return (
     <div className="min-h-screen relative bg-[#0A0B1E]">
-      <Navigation />
-      
       <main className="min-h-screen relative z-0">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
@@ -485,8 +481,6 @@ export default function SolutionsPage() {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </div>
   );
 }

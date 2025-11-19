@@ -9,8 +9,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Plus, Info, Wrench, Briefcase } from "lucide-react";
 import Link from "next/link";
-import Navigation from "@/components/sections/navigation";
-import Footer from "@/components/sections/footer";
 
 const faqData = [
   {
@@ -242,127 +240,123 @@ const faqData = [
 export default function FaqPage() {
   return (
     <div className="min-h-screen bg-background-primary">
-      <Navigation />
-      <main className="min-h-screen bg-background-primary">
-        {/* Hero Section */}
-        <section className="pt-32 md:pt-40 pb-12 md:pb-16">
-          <div className="container mx-auto px-4 max-w-[1100px]">
-            <div className="text-center animate-in fade-in slide-in-from-bottom-2 duration-700">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
-                Questions <span className="text-primary">Fréquentes</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
-                Toutes les réponses à vos questions sur l'automatisation IA et nos services
-              </p>
+      {/* Hero Section */}
+      <section className="pt-32 md:pt-40 pb-12 md:pb-16">
+        <div className="container mx-auto px-4 max-w-[1100px]">
+          <div className="text-center animate-in fade-in slide-in-from-bottom-2 duration-700">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
+              Questions <span className="text-primary">Fréquentes</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
+              Toutes les réponses à vos questions sur l'automatisation IA et nos services
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Rapide */}
+      <section className="pb-12 md:pb-16">
+        <div className="container mx-auto px-4 max-w-[1100px]">
+          <div className="bg-gradient-to-br from-background-secondary/80 to-background-tertiary/60 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-10">
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+              <h2 className="text-xl md:text-2xl font-bold text-primary flex items-center gap-2">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                Navigation Rapide
+              </h2>
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+              {faqData.map((section, index) => {
+                const Icon = section.icon;
+                return (
+                  <a
+                    key={index}
+                    href={`#${section.id}`}
+                    className="group bg-primary/10 hover:bg-primary/20 border border-primary/30 hover:border-primary/60 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="bg-primary/20 p-3 rounded-lg group-hover:bg-primary/30 transition-colors">
+                        <Icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                          {section.category}
+                        </h3>
+                        <p className="text-sm text-text-secondary">
+                          {section.count}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Navigation Rapide */}
-        <section className="pb-12 md:pb-16">
-          <div className="container mx-auto px-4 max-w-[1100px]">
-            <div className="bg-gradient-to-br from-background-secondary/80 to-background-tertiary/60 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-10">
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-                <h2 className="text-xl md:text-2xl font-bold text-primary flex items-center gap-2">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                  Navigation Rapide
+      {/* FAQ Sections by Category */}
+      {faqData.map((section, sectionIndex) => {
+        const Icon = section.icon;
+        return (
+          <section key={sectionIndex} id={section.id} className="py-8 md:py-12 scroll-mt-24">
+            <div className="container mx-auto px-4 max-w-[1100px]">
+              <div className="flex items-center gap-3 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-2 duration-700">
+                <div className="bg-primary/20 p-2.5 rounded-lg">
+                  <Icon className="w-7 h-7 text-primary" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
+                  {section.category}
                 </h2>
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                {faqData.map((section, index) => {
-                  const Icon = section.icon;
-                  return (
-                    <a
-                      key={index}
-                      href={`#${section.id}`}
-                      className="group bg-primary/10 hover:bg-primary/20 border border-primary/30 hover:border-primary/60 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="bg-primary/20 p-3 rounded-lg group-hover:bg-primary/30 transition-colors">
-                          <Icon className="w-6 h-6 text-primary" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                            {section.category}
-                          </h3>
-                          <p className="text-sm text-text-secondary">
-                            {section.count}
-                          </p>
-                        </div>
+              <Accordion type="single" collapsible className="w-full space-y-3 md:space-y-4">
+                {section.questions.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`section-${sectionIndex}-item-${index}`}
+                    className="bg-background-secondary border border-border rounded-lg hover:bg-muted hover:border-white/20 transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 duration-700"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <AccordionTrigger className="group w-full text-left p-5 md:p-6 text-foreground text-sm sm:text-base md:text-lg font-medium flex items-center justify-between hover:no-underline [&>svg]:hidden">
+                      <span className="flex-1 pr-4">{item.question}</span>
+                      <div className="bg-primary/10 p-2 rounded-full transition-all duration-300 group-hover:bg-primary/20 shrink-0">
+                        <Plus className="h-5 w-5 text-primary transition-transform duration-300 ease-in-out group-data-[state=open]:rotate-45" />
                       </div>
-                    </a>
-                  );
-                })}
-              </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground text-sm md:text-base leading-relaxed">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
-          </div>
-        </section>
+          </section>
+        );
+      })}
 
-        {/* FAQ Sections by Category */}
-        {faqData.map((section, sectionIndex) => {
-          const Icon = section.icon;
-          return (
-            <section key={sectionIndex} id={section.id} className="py-8 md:py-12 scroll-mt-24">
-              <div className="container mx-auto px-4 max-w-[1100px]">
-                <div className="flex items-center gap-3 mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-2 duration-700">
-                  <div className="bg-primary/20 p-2.5 rounded-lg">
-                    <Icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
-                    {section.category}
-                  </h2>
-                </div>
-                
-                <Accordion type="single" collapsible className="w-full space-y-3 md:space-y-4">
-                  {section.questions.map((item, index) => (
-                    <AccordionItem
-                      key={index}
-                      value={`section-${sectionIndex}-item-${index}`}
-                      className="bg-background-secondary border border-border rounded-lg hover:bg-muted hover:border-white/20 transition-all duration-300 animate-in fade-in slide-in-from-bottom-2 duration-700"
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
-                      <AccordionTrigger className="group w-full text-left p-5 md:p-6 text-foreground text-sm sm:text-base md:text-lg font-medium flex items-center justify-between hover:no-underline [&>svg]:hidden">
-                        <span className="flex-1 pr-4">{item.question}</span>
-                        <div className="bg-primary/10 p-2 rounded-full transition-all duration-300 group-hover:bg-primary/20 shrink-0">
-                          <Plus className="h-5 w-5 text-primary transition-transform duration-300 ease-in-out group-data-[state=open]:rotate-45" />
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground text-sm md:text-base leading-relaxed">
-                        {item.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            </section>
-          );
-        })}
-
-        {/* CTA Section */}
-        <section className="py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto px-4 max-w-[900px]">
-            <div className="bg-gradient-to-br from-background-secondary to-background-tertiary border border-border rounded-2xl p-8 md:p-12 text-center animate-in fade-in slide-in-from-bottom-2 duration-700 shadow-xl">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-                Votre question n'est pas dans la liste ?
-              </h2>
-              <p className="text-base sm:text-lg text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-                Nos experts sont à votre disposition pour répondre à toutes vos questions sur l'automatisation IA.
-              </p>
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold uppercase tracking-wider rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,132,255,0.5),0_0_60px_rgba(0,132,255,0.3)]">
-                <Link href="/#calendly">
-                  📅 Prendre Rendez-vous Gratuit
-                </Link>
-              </Button>
-            </div>
+      {/* CTA Section */}
+      <section className="py-12 md:py-16 lg:py-20">
+        <div className="container mx-auto px-4 max-w-[900px]">
+          <div className="bg-gradient-to-br from-background-secondary to-background-tertiary border border-border rounded-2xl p-8 md:p-12 text-center animate-in fade-in slide-in-from-bottom-2 duration-700 shadow-xl">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+              Votre question n'est pas dans la liste ?
+            </h2>
+            <p className="text-base sm:text-lg text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
+              Nos experts sont à votre disposition pour répondre à toutes vos questions sur l'automatisation IA.
+            </p>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold uppercase tracking-wider rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,132,255,0.5),0_0_60px_rgba(0,132,255,0.3)]">
+              <Link href="/#calendly">
+                📅 Prendre Rendez-vous Gratuit
+              </Link>
+            </Button>
           </div>
-        </section>
-      </main>
-      <Footer />
+        </div>
+      </section>
     </div>
   );
 }
