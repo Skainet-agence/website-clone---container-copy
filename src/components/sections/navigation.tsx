@@ -28,6 +28,12 @@ const dropdownLinks = [
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleExternalLink = (href: string) => {
+    if (href.startsWith('http')) {
+      window.open(href, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <header className="fixed top-2 md:top-4 lg:top-8 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] max-w-7xl px-2 md:px-4 transition-all duration-300">
       <div className="relative">
@@ -63,15 +69,22 @@ export default function Navigation() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-48 bg-background-secondary border-border text-white shadow-xl">
                 {dropdownLinks.map((link) => (
-                  <DropdownMenuItem key={link.label} asChild>
-                    <Link
-                      href={link.href}
-                      target={link.href.startsWith('http') ? '_blank' : '_self'}
-                      rel={link.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                      className="cursor-pointer hover:bg-white/10 transition-colors"
-                    >
-                      {link.label}
-                    </Link>
+                  <DropdownMenuItem 
+                    key={link.label}
+                    onClick={() => {
+                      if (link.href.startsWith('http')) {
+                        handleExternalLink(link.href);
+                      }
+                    }}
+                    className="cursor-pointer hover:bg-white/10 transition-colors"
+                  >
+                    {link.href.startsWith('http') ? (
+                      <span className="w-full">{link.label}</span>
+                    ) : (
+                      <Link href={link.href} className="w-full">
+                        {link.label}
+                      </Link>
+                    )}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
