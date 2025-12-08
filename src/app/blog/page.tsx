@@ -72,6 +72,16 @@ const blogArticles = [
   },
   // Cas Clients
   {
+    id: "cas-client-trading-crypto-arbitrage-automatise",
+    title: "Cas Client : Agent d'Arbitrage Crypto Automatisé - 2,8M€ de Profits en 6 Mois",
+    excerpt: "Découvrez comment notre système d'IA ultra-personnalisé a révolutionné le trading crypto de CryptoFlow avec un workflow d'arbitrage multi-plateformes automatisé, générant 2,8M€ de profits en 6 mois.",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/2a171cb0-4675-4d44-a4d0-c463f6dad5a4/generated_images/professional-business-photograph-of-a-mo-8f3bdae3-20251208172713.jpg",
+    category: "Cas Clients",
+    readTime: "12 min",
+    date: "28 Novembre 2025",
+    featured: false,
+  },
+  {
     id: "cas-client-industrie-precision-automatisation-production",
     title: "Cas Client : Comment une PME Industrielle a Réduit ses Coûts de 35% avec l'IA",
     excerpt: "Découvrez comment Precision Métal, une entreprise de 45 employés, a automatisé sa chaîne de production et son suivi qualité pour économiser 180 000€/an.",
