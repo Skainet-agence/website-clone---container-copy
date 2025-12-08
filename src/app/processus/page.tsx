@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, Check, Target, Users, TrendingUp, Zap, CheckCircle } from "lucide-react";
+import { Calendar, Check, Target, Users, TrendingUp, Sparkles, CheckCircle, Workflow } from "lucide-react";
 import Link from "next/link";
 
 export default function ProcessusPage() {
@@ -13,7 +13,7 @@ export default function ProcessusPage() {
             Notre <span className="text-primary">Processus</span> Éprouvé
           </h1>
           <p className="text-lg text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed">
-            Découvrez notre méthode en 3 étapes pour transformer votre entreprise avec l'intelligence artificielle. Un processus rodé qui garantit des résultats mesurables et durables.
+            Découvrez notre méthode en 3 étapes pour transformer votre entreprise avec l'IA. Un processus rodé qui garantit des résultats mesurables et durables.
           </p>
           <Link
             href="#steps"
@@ -48,12 +48,12 @@ export default function ProcessusPage() {
                   <div className="text-6xl font-black text-primary mb-4">01</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Audit Gratuit</h3>
                   <p className="text-text-secondary mb-6 leading-relaxed">
-                    Analyse complète de vos processus actuels pour identifier les opportunités d'automatisation les plus rentables. Nous étudions votre écosystème digital et vos besoins spécifiques.
+                    Analyse de vos processus pour identifier les opportunités d'automatisation les plus rentables.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start text-text-secondary">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Diagnostic approfondi de vos processus</span>
+                      <span>Diagnostic approfondi</span>
                     </li>
                     <li className="flex items-start text-text-secondary">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
@@ -65,11 +65,11 @@ export default function ProcessusPage() {
                     </li>
                     <li className="flex items-start text-text-secondary">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Présentation des gains rapides</span>
+                      <span>Gains rapides identifiés</span>
                     </li>
                     <li className="flex items-start text-text-secondary">
                       <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Présentation des recommandations</span>
+                      <span>Recommandations détaillées</span>
                     </li>
                   </ul>
                 </div>
@@ -82,7 +82,7 @@ export default function ProcessusPage() {
                   <div className="text-6xl font-black text-[#22C55E] mb-4">02</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Implémentation</h3>
                   <p className="text-text-secondary mb-6 leading-relaxed">
-                    Développement et déploiement de vos solutions d'automatisation avec formation complète de vos équipes. Une approche progressive pour une adoption en douceur.
+                    Développement et déploiement de vos solutions avec formation de vos équipes.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start text-text-secondary">
@@ -116,7 +116,7 @@ export default function ProcessusPage() {
                   <div className="text-6xl font-black text-[#F97316] mb-4">03</div>
                   <h3 className="text-2xl font-bold text-white mb-4">Optimisation</h3>
                   <p className="text-text-secondary mb-6 leading-relaxed">
-                    Suivi des performances et optimisation continue de vos processus automatisés pour maximiser les résultats. Un accompagnement long terme pour une croissance durable.
+                    Suivi des performances et optimisation continue pour maximiser vos résultats.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start text-text-secondary">
@@ -166,7 +166,7 @@ export default function ProcessusPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Approche Ciblée</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Nous identifions précisément vos besoins pour des solutions parfaitement adaptées.
+                Solutions parfaitement adaptées à vos besoins spécifiques.
               </p>
             </div>
 
@@ -176,7 +176,7 @@ export default function ProcessusPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Accompagnement</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Formation et support continu pour garantir l'adoption par vos équipes.
+                Formation et support continu pour vos équipes.
               </p>
             </div>
 
@@ -186,30 +186,33 @@ export default function ProcessusPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">ROI Mesurable</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Suivi précis des performances avec des KPIs concrets et chiffrés.
+                Suivi précis avec des KPIs concrets et chiffrés.
               </p>
             </div>
 
             <div className="bg-[#20214A]/80 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-[#7C3AED] to-[#7C3AED]/60 rounded-2xl flex items-center justify-center mb-4">
-                <Zap className="h-8 w-8 text-white" />
+                <Sparkles className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Évolutivité</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Adaptabilité</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Solutions conçues pour grandir avec votre entreprise et vos besoins.
+                Solutions flexibles qui s'ajustent à vos besoins changeants.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Chronologie de Votre Succès */}
+      {/* Comment Ça Marche */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Chronologie de Votre Succès
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Workflow className="h-10 w-10 text-primary" />
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                Comment Ça Marche
+              </h2>
+            </div>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto">
               De la première consultation aux résultats rapides, découvrez le calendrier de votre transformation
             </p>
@@ -221,7 +224,7 @@ export default function ProcessusPage() {
               <div className="text-4xl font-black text-primary mb-3">J+0</div>
               <h3 className="text-xl font-bold text-white mb-3">Premier Contact</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                Appel de découverte et présentation gratuit de vos processus.
+                Appel de découverte et présentation de vos processus.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start text-text-secondary text-sm">
@@ -230,11 +233,11 @@ export default function ProcessusPage() {
                 </li>
                 <li className="flex items-start text-text-secondary text-sm">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0" />
-                  <span>Informations sur la continuité</span>
+                  <span>Échange confidentiel</span>
                 </li>
                 <li className="flex items-start text-text-secondary text-sm">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 mt-2 flex-shrink-0" />
-                  <span>Sans engagement ni frais</span>
+                  <span>Sans engagement</span>
                 </li>
               </ul>
             </div>
@@ -244,7 +247,7 @@ export default function ProcessusPage() {
               <div className="text-4xl font-black text-[#22C55E] mb-3">J+7</div>
               <h3 className="text-xl font-bold text-white mb-3">Audit Complet</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                Présentation des opportunités et validation de la stratégie d'automatisation.
+                Présentation des opportunités et validation de la stratégie.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start text-text-secondary text-sm">
@@ -263,7 +266,7 @@ export default function ProcessusPage() {
               <div className="text-4xl font-black text-[#F97316] mb-3">J+30</div>
               <h3 className="text-xl font-bold text-white mb-3">Première Automatisation</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                Lancement de votre première solution et formation de vos équipes.
+                Lancement de votre première solution et formation.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start text-text-secondary text-sm">
@@ -282,7 +285,7 @@ export default function ProcessusPage() {
               <div className="text-4xl font-black text-[#7C3AED] mb-3">J+90</div>
               <h3 className="text-xl font-bold text-white mb-3">Résultats Mesurables</h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                Premiers résultats et optimisation continue de vos processus automatisés.
+                Premiers résultats et optimisation continue.
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start text-text-secondary text-sm">
@@ -291,7 +294,7 @@ export default function ProcessusPage() {
                 </li>
                 <li className="flex items-start text-text-secondary text-sm">
                   <div className="w-1.5 h-1.5 bg-[#7C3AED] rounded-full mr-2 mt-2 flex-shrink-0" />
-                  <span>Ajustements et améliorations</span>
+                  <span>Ajustements continus</span>
                 </li>
               </ul>
             </div>
@@ -310,7 +313,7 @@ export default function ProcessusPage() {
               Commencez Votre Transformation Dès Aujourd'hui
             </h2>
             <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
-              Réservez votre audit gratuit et découvrez comment notre processus éprouvé peut révolutionner votre entreprise. Aucun engagement, que des opportunités à saisir.
+              Réservez votre audit gratuit et découvrez comment transformer votre entreprise. Aucun engagement, que des opportunités.
             </p>
             <Link
               href="/#contact"
