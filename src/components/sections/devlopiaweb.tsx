@@ -103,7 +103,7 @@ const DevlopiawebSection = () => {
 
                         <div className="mt-auto flex flex-col sm:flex-row gap-4">
                             <a
-                                href="https://devlopiaweb.fr"
+                                href="https://Devlopliaweb.fr"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto text-center bg-primary text-primary-foreground font-semibold py-3 px-6 rounded-xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 text-sm md:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
