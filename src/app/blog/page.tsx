@@ -70,6 +70,57 @@ const blogArticles = [
     date: "25 Novembre 2024",
     featured: false,
   },
+  // Cas Clients
+  {
+    id: "cas-client-industrie-precision-automatisation-production",
+    title: "Cas Client : Comment une PME Industrielle a Réduit ses Coûts de 35% avec l'IA",
+    excerpt: "Découvrez comment Precision Métal, une entreprise de 45 employés, a automatisé sa chaîne de production et son suivi qualité pour économiser 180 000€/an.",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/2a171cb0-4675-4d44-a4d0-c463f6dad5a4/generated_images/modern-3d-isometric-illustration-of-an-i-5818cbb1-20251208155233.jpg",
+    category: "Cas Clients",
+    readTime: "14 min",
+    date: "15 Juin 2025",
+    featured: false,
+  },
+  {
+    id: "cas-client-cabinet-medical-gestion-patients",
+    title: "Cas Client : Un Cabinet Médical Multiplie par 3 sa Capacité de Consultation",
+    excerpt: "Comment le Dr. Rousseau a libéré 20h/semaine grâce à l'automatisation des prises de rendez-vous, rappels et gestion administrative.",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/2a171cb0-4675-4d44-a4d0-c463f6dad5a4/generated_images/professional-3d-illustration-of-a-modern-8b5c9f27-20251208155233.jpg",
+    category: "Cas Clients",
+    readTime: "12 min",
+    date: "22 Avril 2025",
+    featured: false,
+  },
+  {
+    id: "cas-client-ecommerce-mode-croissance-explosive",
+    title: "Cas Client : De 50K€ à 400K€/mois - L'E-commerce Mode Qui Explose Grâce à l'IA",
+    excerpt: "L'histoire de StyleHub : comment un chatbot intelligent et l'automatisation email ont multiplié le CA par 8 en 10 mois.",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/2a171cb0-4675-4d44-a4d0-c463f6dad5a4/generated_images/sleek-3d-e-commerce-visualization-with-f-cec75fdc-20251208155234.jpg",
+    category: "Cas Clients",
+    readTime: "16 min",
+    date: "8 Mars 2025",
+    featured: false,
+  },
+  {
+    id: "cas-client-cabinet-comptable-efficacite-double",
+    title: "Cas Client : Cabinet Comptable Double son Portefeuille Clients Sans Recruter",
+    excerpt: "Découvrez comment Compta Plus a automatisé 70% de ses tâches administratives et accepte désormais 50 clients supplémentaires avec la même équipe.",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/2a171cb0-4675-4d44-a4d0-c463f6dad5a4/generated_images/professional-3d-illustration-of-automate-34534262-20251208155233.jpg",
+    category: "Cas Clients",
+    readTime: "13 min",
+    date: "3 Février 2025",
+    featured: false,
+  },
+  {
+    id: "cas-client-agence-immobiliere-leads-conversion",
+    title: "Cas Client : Agence Immobilière Augmente ses Conversions de 127% en 4 Mois",
+    excerpt: "Comment Immo Premium a transformé son processus de qualification des leads avec un CRM intelligent et un suivi automatisé hyper-personnalisé.",
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/2a171cb0-4675-4d44-a4d0-c463f6dad5a4/generated_images/modern-3d-real-estate-crm-visualization--05d221f3-20251208155234.jpg",
+    category: "Cas Clients",
+    readTime: "15 min",
+    date: "18 Janvier 2025",
+    featured: false,
+  },
 ];
 
 const categories = [
@@ -80,6 +131,7 @@ const categories = [
   "Transformation Digitale",
   "Sales & CRM",
   "E-commerce",
+  "Cas Clients",
 ];
 
 export default function BlogPage() {
