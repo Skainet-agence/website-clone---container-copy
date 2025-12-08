@@ -6,7 +6,7 @@ import { ArrowLeft, CheckCircle2, TrendingUp, Activity, Zap, Shield, Clock, BarC
 export const metadata: Metadata = {
   title: "Cas Client : Agent d'Arbitrage Crypto Automatisé | CryptoFlow Trading",
   description: "Découvrez comment notre système d'arbitrage crypto ultra-personnalisé a permis à CryptoFlow de générer 2,8M€ de profits en 6 mois avec une automatisation totale du trading multi-plateformes.",
-  keywords: "arbitrage crypto, trading automatisé, intelligence artificielle, crypto bot, automatisation trading, workflow personnalisé",
+  keywords: "arbitrage crypto, trading automatisé, intelligence artificielle, crypto bot, automatisation trading, workflow personnalisé"
 };
 
 export default function CryptoArbitrageCaseStudy() {
@@ -15,10 +15,10 @@ export default function CryptoArbitrageCaseStudy() {
       {/* Header Navigation */}
       <div className="border-b border-border">
         <div className="container mx-auto px-4 py-6">
-          <Link 
-            href="/blog" 
-            className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors"
-          >
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors">
+
             <ArrowLeft className="w-4 h-4" />
             Retour au blog
           </Link>
@@ -54,8 +54,8 @@ export default function CryptoArbitrageCaseStudy() {
             alt="Trading crypto automatisé avec agent d'arbitrage IA"
             fill
             className="object-cover"
-            priority
-          />
+            priority />
+
         </div>
 
         {/* Quick Stats */}
@@ -719,7 +719,7 @@ export default function CryptoArbitrageCaseStudy() {
               <div className="text-center">
                 <div className="text-5xl font-black text-accent-primary mb-2">2,8M€</div>
                 <div className="text-text-secondary">Profits nets générés en 6 mois</div>
-                <div className="text-sm text-success mt-2">ROI de 233% sur investissement initial</div>
+                <div className="text-sm text-success mt-2 !whitespace-pre-line">ROI de 633% sur investissement initial</div>
               </div>
               <div className="text-center">
                 <div className="text-5xl font-black text-accent-primary mb-2">52 147</div>
@@ -852,11 +852,11 @@ export default function CryptoArbitrageCaseStudy() {
           
           <div className="bg-gradient-to-br from-background-secondary to-background-tertiary rounded-2xl p-8 border border-border">
             <div className="flex gap-1 mb-6">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <svg key={star} className="w-6 h-6 fill-current text-star-rating" viewBox="0 0 20 20">
+              {[1, 2, 3, 4, 5].map((star) =>
+              <svg key={star} className="w-6 h-6 fill-current text-star-rating" viewBox="0 0 20 20">
                   <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                 </svg>
-              ))}
+              )}
             </div>
             
             <blockquote className="text-xl text-text-primary italic mb-6 leading-relaxed">
@@ -984,10 +984,10 @@ export default function CryptoArbitrageCaseStudy() {
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
               Ce cas client démontre qu'aucun workflow n'est trop complexe à automatiser. Que vous soyez dans la finance, l'industrie, le commerce ou les services, nous pouvons créer une solution IA ultra-personnalisée qui révolutionnera votre business.
             </p>
-            <Link 
+            <Link
               href="/#audit-cta"
-              className="inline-block px-8 py-4 bg-white text-accent-primary font-bold rounded-xl hover:scale-105 transition-transform"
-            >
+              className="inline-block px-8 py-4 bg-white text-accent-primary font-bold rounded-xl hover:scale-105 transition-transform">
+
               RÉSERVEZ VOTRE AUDIT GRATUIT
             </Link>
           </div>
@@ -1044,6 +1044,6 @@ export default function CryptoArbitrageCaseStudy() {
           </div>
         </section>
       </article>
-    </div>
-  );
+    </div>);
+
 }
