@@ -90,12 +90,9 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background-primary">
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="pt-28 md:pt-36 pb-12 md:pb-16">
         <div className="container mx-auto px-4 max-w-[1200px]">
           <div className="text-center animate-in fade-in slide-in-from-bottom-2 duration-700">
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-6">
-              <span className="text-primary text-sm font-semibold">✨ Expertise & Innovation</span>
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
               Le Blog <span className="text-primary">IA & Automatisation</span>
             </h1>
