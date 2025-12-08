@@ -719,7 +719,7 @@ export default function CryptoArbitrageCaseStudy() {
               <div className="text-center">
                 <div className="text-5xl font-black text-accent-primary mb-2">2,8M€</div>
                 <div className="text-text-secondary">Profits nets générés en 6 mois</div>
-                <div className="text-sm text-success mt-2 !whitespace-pre-line">ROI de 633% sur investissement initial</div>
+                <div className="text-sm text-success mt-2 !whitespace-pre-line !whitespace-pre-line">ROI de 833% sur investissement initial</div>
               </div>
               <div className="text-center">
                 <div className="text-5xl font-black text-accent-primary mb-2">52 147</div>
